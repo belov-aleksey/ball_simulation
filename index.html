@@ -5,13 +5,43 @@ Credits: https://github.com/matthias-research/pages/blob/master/tenMinutePhysics
 <!DOCTYPE html>
 <html>
 
-<head>
+<head>    
 <title>Cannonball</title>
 </head>
 
 <body>
-    <div><button onclick="add_ball()"  style="width: 100px; height: 100px;">ball++</button></div>
-    <canvas id="myCanvas" style="border:2px solid"></canvas>
-<script src="src.js"></script> 
+    <style>
+        body {
+            font-family: verdana; 
+            font-size: 15px;
+        }			
+        .button {
+            background-color: #606060;
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .slider {
+            -webkit-appearance: none;
+            width: 80px;
+            height: 6px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+    </style>
+    <button id="add_ball_button" style="width: 100px; height: 100px;">ball++</button>
+    <button id="add_balls_button" style="width: 100px; height: 100px;">ball+++</button>
+	Restitution <input type = "range" min = "0" max = "10" value = "10" id = "restitutionSlider" class = "slider">
+	<br>
+	<canvas id="myCanvas" style="border:2px solid"></canvas>
+<script type="module" src="src/src.js"></script> 
+
 </body>
 </html>
